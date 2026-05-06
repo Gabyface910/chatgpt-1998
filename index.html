@@ -136,6 +136,7 @@
 </center>
 
 <script>
+const date = Date.now()
 async function sendQuery() {
     const keyInput = document.getElementById('apiKey').value;
     const promptInput = document.getElementById('prompt');
@@ -174,7 +175,7 @@ async function sendQuery() {
             body: JSON.stringify({
                 model: "llama-3.3-70b-versatile",
                 messages: [
-                    {role: "system", content: "Your name is ChatGPT, and you are from 1998. You are running on the model GPT-0.1, and you are a helpful AI assistant."},
+                    {role: "system", content: "Your name is ChatGPT, and you are from 1998. You are running on the model GPT-0.1, and you are a helpful AI assistant. The current date is " + date},
                     {role: "user", content: userText}
                 ]
             })
