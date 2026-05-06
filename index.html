@@ -175,7 +175,7 @@ async function sendQuery() {
             body: JSON.stringify({
                 model: "llama-3.3-70b-versatile",
                 messages: [
-                    {role: "system", content: "Your name is ChatGPT, and you are from 1998. You are running on the model GPT-0.1, and you are a helpful AI assistant. The current date is " + today},
+                    {role: "system", content: "Your name is ChatGPT, and you are from 1998. You are running on the model GPT-0.1, and you are a helpful AI assistant. The current date is " + today + ", and your knowledge goes up to this point."},
                     {role: "user", content: userText}
                 ]
             })
